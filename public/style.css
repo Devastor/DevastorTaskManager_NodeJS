@@ -1,0 +1,84 @@
+body {
+    background-color: #f8f9fa;
+    /* Цвет фона страницы */
+    font-family: 'Arial', sans-serif;
+    /* Шрифт для всего текста на странице */
+}
+
+.jumbotron {
+    background-color: #343a40;
+    /* Цвет фона заголовка */
+    color: white;
+    /* Цвет текста заголовка */
+    padding: 30px;
+    /* Внутренние отступы */
+    border-radius: 10px;
+    /* Скругление углов */
+}
+
+.form-group {
+    margin-bottom: 20px;
+    /* Отступ снизу */
+}
+
+.task {
+    padding: 10px;
+    /* Внутренние отступы */
+    margin: 10px 0;
+    /* Отступы сверху и снизу */
+    background-color: #ffffff;
+    /* Цвет фона */
+    border-radius: 5px;
+    /* Скругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Тень */
+    transition: transform 0.2s, opacity 0.2s;
+    /* Анимация изменения размера и прозрачности */
+}
+
+.task.completed {
+    text-decoration: line-through;
+    /* Перечеркивание текста */
+    color: gray;
+    /* Цвет текста */
+}
+
+.task-header h4 {
+    display: inline-block;
+    /* Расположение элементов в одну строку */
+    margin: 0;
+    /* Обнуление внешних отступов */
+}
+
+.task-actions {
+    text-align: right;
+    /* Выравнивание кнопок по правому краю */
+}
+
+.fade-in {
+    transform: translateY(-20px);
+    /* Начальная позиция элемента (анимация) */
+    opacity: 0;
+    /* Начальная прозрачность элемента */
+}
+
+.fade-in.show {
+    transform: translateY(0);
+    /* Конечная позиция элемента */
+    opacity: 1;
+    /* Конечная прозрачность элемента */
+}
+
+.fade-out {
+    transform: translateY(0);
+    /* Начальная позиция элемента */
+    opacity: 1;
+    /* Начальная прозрачность элемента */
+}
+
+.fade-out.hide {
+    transform: translateY(20px);
+    /* Конечная позиция элемента (анимация) */
+    opacity: 0;
+    /* Конечная прозрачность элемента */
+}

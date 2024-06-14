@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="taskManagerApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Подключаем Bootstrap для оформления -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем пользовательские стили -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Подключаем AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+    <!-- Подключаем модуль маршрутизации AngularJS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключаем jQuery -->
+    <script src="app.js"></script>
+    <!-- Подключаем основной файл приложения AngularJS -->
+    <script src="controllers.js"></script>
+    <!-- Подключаем контроллеры AngularJS -->
+    <script src="services.js"></script>
+    <!-- Подключаем сервисы AngularJS -->
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Devastor Task Manager</h1>
+            <!-- Заголовок приложения -->
+        </div>
+        <div ng-view></div>
+        <!-- Контейнер для отображения представлений -->
+    </div>
+</body>
+</html>

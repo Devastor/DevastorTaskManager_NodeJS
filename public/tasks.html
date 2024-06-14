@@ -1,0 +1,24 @@
+<div class="form-group">
+    <input type="text" ng-model="newTask.title" placeholder="Task Title" class="form-control">
+    <!-- Поле ввода для названия задачи -->
+    <textarea ng-model="newTask.description" placeholder="Task Description" class="form-control mt-2"></textarea>
+    <!-- Поле ввода для описания задачи -->
+    <button ng-click="addTask()" class="btn btn-primary mt-2">Add Task</button>
+    <!-- Кнопка для добавления новой задачи -->
+</div>
+
+<div ng-repeat="task in tasks" class="task fade-in" id="{{task._id}}" ng-class="{ 'completed': task.completed }">
+    <!-- Повторение для каждой задачи в списке, добавление классов для анимации -->
+    <div class="task-header">
+        <h4>
+            <input type="checkbox" ng-model="task.completed" ng-change="updateTask(task)"> {{ task.title }}
+            <!-- Чекбокс для изменения состояния выполнения задачи и название задачи -->
+        </h4>
+    </div>
+    <p>{{ task.description }}</p>
+    <!-- Описание задачи -->
+    <div class="task-actions">
+        <button ng-click="deleteTask(task)" class="btn btn-danger">Delete</button>
+        <!-- Кнопка для удаления задачи -->
+    </div>
+</div>
